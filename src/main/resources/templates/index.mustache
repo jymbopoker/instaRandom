@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get lucky follower</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="content">
+<section class="content__flex">
+    <form method="post">
+        <div class="content__function">
+            <input class="content__input" type="text" name="shortcode" placeholder="Example: B1bTVokI-li">
+            <button class="content__button">Random</button>
+
+        </div>
+    </form>
+    <div class="content__list">
+        {{errorMessage}}
+
+        {{#isApplied}}
+        <div class="content__list__winner">Победитель:
+            <div class="winnerName">{{winner}}</div>
+            {{/isApplied}}
+
+            {{#isApplied}}
+        </div>
+        <div class="content__list__headNameList">Список участников: </div>
+        <div class="content__list__participants">
+            {{/isApplied}}
+            {{#usernames}}
+
+            <div>
+                <b>{{.}}</b>
+            </div>
+
+            {{/usernames}}
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
